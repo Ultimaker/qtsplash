@@ -10,6 +10,9 @@ if(GIT_FOUND)
     execute_process(COMMAND ${GIT_EXECUTABLE} describe --dirty --tags --always OUTPUT_VARIABLE GIT_VERSION OUTPUT_STRIP_TRAILING_WHITESPACE)
 endif()
 
+add_subdirectory(src)
+add_subdirectory(resources)
+
 install(
     FILES "${CMAKE_SOURCE_DIR}/LICENSE"
     DESTINATION "${CMAKE_INSTALL_FULL_DOCDIR}"
